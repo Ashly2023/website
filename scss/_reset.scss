@@ -1,0 +1,121 @@
+/*-- 4. RESET --*/
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    margin: auto;
+    font-family: var(--theme-font);
+    font-size: 15px;
+    line-height: 30px;
+    color: var(--color-dark);
+    scroll-behavior: smooth;
+    @include transition(all 0.3s ease 0s);
+    position: relative;
+    background: url(../images/bg.jpg) center -50% repeat var(--color-white);
+    background-attachment: fixed;
+    z-index: 1;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--base-color);
+        outline: 1px solid var(--base-color);
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+li {
+    list-style: none;
+    font-family: var(--theme-font);
+}
+
+a,
+a:hover,
+a:focus,
+button,
+button:focus {
+    outline: none !important;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: none;
+    font-family: var(--theme-font);
+    @include transition(all 0.3s ease);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--theme-font);
+    font-weight: inherit;
+    line-height: inherit;
+    @include transition(all 0.3s ease);
+}
+
+p {
+    @include transition(all 0.3s ease);
+    font-family: var(--theme-font);
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+    border-style: none;
+    @include transition(all 0.3s ease);
+}
+
+svg {
+    vertical-align: middle;
+    @include transition(all 0.3s ease);
+}
+
+.is_relative {
+    position: relative;
+}
+
+section,
+div {
+    scroll-margin-top: 150px;
+}
+
+.container {
+    @include respond-below(lg) {
+        max-width: 100%;
+        padding: 0 50px;
+    }
+    @include respond-below(md) {
+        padding: 0 30px;
+    }
+}
+
+.mainContent {
+    padding: 120px 0px;
+    @include respond-below(desktop) {
+        padding: 80px 0px;
+    }
+    @include respond-below(laptop) {
+        padding: 80px 0px;
+    }
+    @include respond-below(md) {
+        padding: 50px 0px;
+    }
+}
