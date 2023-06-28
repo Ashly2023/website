@@ -1,0 +1,2 @@
+                                <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/about-img1.jpg" alt="Images"> -->
+								<img src="<?php echo get_template_directory_uri(); ?>/images/about-img2.jpg" alt="Images">
